@@ -38,14 +38,15 @@ public class Alquiler {
         this.horaFin = horaFin;
     }
 
-    public Date getDia() {
-        return dia;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setDia(Date dia) {
-        this.dia = dia;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
+  
     public String getServicios() {
         return servicios;
     }
