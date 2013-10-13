@@ -50,12 +50,12 @@ public class LocalDAO extends BaseDAO {
         Connection con = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
-            Local item = new Local();
+        Local item = new Local();
         try {
             con = ConexionDB.obtenerConexion();
             stmt = con.prepareStatement(query);
-            stmt.setLong(1,local.getId());
-            
+            stmt.setLong(1, local.getId());
+
             rs = stmt.executeQuery();
 
             while (rs.next()) {
@@ -67,7 +67,7 @@ public class LocalDAO extends BaseDAO {
                 item.setEstado(rs.getInt("estado"));
             }
         } catch (SQLException e) {
-              System.err.println(e.getMessage());
+            System.err.println(e.getMessage());
         } finally {
             this.cerrarResultSet(rs);
             this.cerrarStatement(stmt);
@@ -112,21 +112,21 @@ public class LocalDAO extends BaseDAO {
         }
         return local;
     }
-    
-     public Local update(Local local) throws DAOExcepcion {
+
+    public Local update(Local local) throws DAOExcepcion {
         String query = "update local direccion=?,descripcion=?,estado=?,maps=?,telefono=? where id=?";
         Connection con = null;
         PreparedStatement stmt = null;
         try {
             con = ConexionDB.obtenerConexion();
             stmt = con.prepareStatement(query);
-             stmt.setString(1, local.getDireccion());
+            stmt.setString(1, local.getDireccion());
             stmt.setString(2, local.getDescripcion());
             stmt.setInt(3, local.getEstado());
             stmt.setString(4, local.getMaps());
             stmt.setString(5, local.getTelefono());
             stmt.setLong(6, local.getId());
-            
+
             int i = stmt.executeUpdate();
             if (i != 1) {
                 throw new SQLException("No se pudo actualizar");
@@ -159,6 +159,4 @@ public class LocalDAO extends BaseDAO {
             this.cerrarConexion(con);
         }
     }
-
-   
 }
