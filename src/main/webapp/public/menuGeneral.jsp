@@ -6,15 +6,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">CLUB</a>
           <div class="nav-collapse collapse" style="height: 0px;">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+              login <a href="#" class="navbar-link">usuario</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><a href="#">Nosotros</a></li>
+              <li><a href="#about">Servicios</a></li>
+              <li><a href="contactenos.jsp">Contactenos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

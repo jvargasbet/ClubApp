@@ -19,7 +19,7 @@ public class ServicioDAO extends BaseDAO {
         ResultSet rs = null;
         try {
             con = ConexionDB.obtenerConexion();
-            String query = "select * from servicio order;";
+            String query = "select * from servicio;";
             stmt = con.prepareStatement(query);
             rs = stmt.executeQuery();
 
