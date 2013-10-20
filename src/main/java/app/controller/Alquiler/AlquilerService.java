@@ -24,7 +24,7 @@ public class AlquilerService {
         Alquiler alquiler = new Alquiler();
         alquiler.setHoraInicio("09:50:00");
         alquiler.setHoraFin("11:00:00");
-        alquiler.setFecha((Date) utiles.stringToDate("11/05/2013"));
+        alquiler.setFecha(utiles.stringToDate("11/05/2013"));
         
         alquiler.setServicios("Solicitud de canchita de fulbito");
         alquiler.setEstado(1);

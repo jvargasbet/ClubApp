@@ -1,5 +1,7 @@
 package app.zelper;
 
+import java.util.Date;
+
 public class Helper {
 
     public static Integer toInteger(String string, Integer deff) {
@@ -15,5 +17,13 @@ public class Helper {
         }
         return value;
 
+    }
+    
+    public static java.sql.Date getSQLDate(Date date){
+        
+        return new java.sql.Date(date.getTime());
+                
+        
+        
     }
 }

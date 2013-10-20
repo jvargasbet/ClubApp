@@ -2,7 +2,9 @@ package app.dao;
 
 import app.model.Alquiler;
 import app.zelper.ConexionDB;
+import app.zelper.Helper;
 import java.sql.Connection;
+import java.sql.Date;
 
 
 import java.sql.PreparedStatement;
@@ -93,7 +95,7 @@ public class AlquilerDAO extends BaseDAO {
             stmt.setString(1, alquiler.getHoraInicio());
             stmt.setString(2, alquiler.getHoraFin());
             //Pregunta profesor
-            stmt.setDate(3,  alquiler.getFecha());
+            stmt.setDate(3, Helper.getSQLDate(alquiler.getFecha()));
             stmt.setString(4, alquiler.getServicios());
             stmt.setInt(5, alquiler.getEstado());
             stmt.setLong(6, alquiler.getSocio().getId());
@@ -131,7 +133,7 @@ public class AlquilerDAO extends BaseDAO {
             stmt.setString(1, alquiler.getHoraInicio());
             stmt.setString(2, alquiler.getHoraFin());
             //Pregunta profesor
-            stmt.setDate(3,  alquiler.getFecha());
+            stmt.setDate(3,  new Date(alquiler.getFecha().getTime()));
             stmt.setString(4, alquiler.getServicios());
             stmt.setInt(5, alquiler.getEstado());
             stmt.setLong(6, alquiler.getSocio().getId());

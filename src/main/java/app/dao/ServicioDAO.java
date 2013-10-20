@@ -105,13 +105,13 @@ public class ServicioDAO extends BaseDAO {
     }
     
      public Servicio update(Servicio servicio) throws DAOExcepcion {
-        String query = "update servicio descripcion=?,costo_hora=? where id=?";
+        String query = "update servicio set descripcion=?,costo_hora=? where id=?";
         Connection con = null;
         PreparedStatement stmt = null;
         try {
             con = ConexionDB.obtenerConexion();
             stmt = con.prepareStatement(query);
-             stmt.setString(1, servicio.getDescripcion());
+            stmt.setString(1, servicio.getDescripcion());
             stmt.setDouble(2, servicio.getCostoHora());
             stmt.setLong(3, servicio.getId());
             
