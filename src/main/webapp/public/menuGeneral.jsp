@@ -6,17 +6,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">CLUB</a>
+          <a class="brand" href="#">Club App</a>
+          
           <div class="nav-collapse collapse" style="height: 0px;">
             <p class="navbar-text pull-right">
-              login <a href="#" class="navbar-link">usuario</a>
+              Autenticado como <a href="#" class="navbar-link">Usuario</a>
             </p>
-            <ul class="nav">
-              <li class="active"><a href="#">Nosotros</a></li>
-              <li><a href="#about">Servicios</a></li>
-              <li><a href="contactenos.jsp">Contactenos</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+            <!--<ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>-->
+          </div>
         </div>
       </div>
     </div>
